@@ -1,0 +1,159 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+/* ===== PAGE ===== */
+body {
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+/* ===== APP WRAPPER ===== */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* ===== BOARD CARD ===== */
+.board {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== TITLE ===== */
+.board h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUT ROW ===== */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 180px 220px 140px 100px;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.input-row input,
+.input-row select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-row input:focus,
+.input-row select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== ADD BUTTON ===== */
+.add-btn {
+  background: #6366f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.add-btn:hover {
+  background: #4f46e5;
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== COLUMNS ===== */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ===== COLUMN CARD ===== */
+.column {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== COLUMN HEADER ===== */
+.column h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ===== COLOR STRIP ===== */
+.column.todo {
+  border-top: 4px solid #6366f1;
+}
+
+.column.progress {
+  border-top: 4px solid #f59e0b;
+}
+
+.column.completed {
+  border-top: 4px solid #10b981;
+}
+
+/* ===== TASK LIST ===== */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* ===== TASK CARD ===== */
+.task {
+  background: #ffffff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  cursor: grab;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

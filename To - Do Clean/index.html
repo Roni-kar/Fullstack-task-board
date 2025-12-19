@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>Task Board</h1>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <div class="control-group">
+        <label>Add Task</label>
+        <input id="task-input" type="text" placeholder="e.g. Finish assignment" />
+      </div>
+
+      <div class="control-group">
+        <label>📅 Due date (deadline)</label>
+        <input id="due-date" type="date" />
+      </div>
+
+      <div class="control-group">
+        <label>⏰ Reminder (alert time)</label>
+        <input id="reminder-date" type="datetime-local" />
+      </div>
+
+      <button id="add-btn">Add</button>
+    </div>
+
+    <!-- BOARD -->
+    <div class="board">
+      <div class="column todo">
+        <h2>To Do</h2>
+        <ul id="todo-list"></ul>
+      </div>
+
+      <div class="column progress">
+        <h2>In Progress</h2>
+        <ul id="progress-list"></ul>
+      </div>
+
+      <div class="column completed">
+        <h2>Completed</h2>
+        <ul id="completed-list"></ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span id="task-count">0 tasks</span>
+    </div>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div class="modal hidden" id="edit-modal">
+    <div class="modal-content">
+      <h3>Edit Task</h3>
+      <input id="edit-input" type="text" />
+      <div class="modal-actions">
+        <button id="save-edit">Save</button>
+        <button id="cancel-edit">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
